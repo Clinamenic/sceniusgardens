@@ -27,27 +27,34 @@ body{
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
-    background-color: cyan;
+    background-color: red;
 }
 
 .gallery2{
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(2, var(--column2));
+    grid-template-columns: repeat(2, calc(50% - 5px));
     grid-template-rows: repeat(infinite, 49%);
     justify-content: center;
     grid-row-gap: 10px;
     grid-column-gap: 10px;
 }
+@media only screen and (max-width: 830px) {
+
+    .gallery2{
+        grid-template-columns: repeat(1, 100%);
+        grid-row-gap: 10px;
+    }
+
+}
+
 
 .member-plot{
-    position: relatives;
+    height: 45vw;
+    width: 100%;
     border: 1px solid white;
     border-radius: 15px;
     overflow: hidden;
-    height: 45vw;
-    width: 100%;
-    margin: 5px;
 }
 .member-portal{
     width: 100%;
