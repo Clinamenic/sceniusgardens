@@ -10,6 +10,7 @@
 }
 
 html {
+    
     font-size: 16;
     font-family: "Roboto Mono"; 
     font-weight: 200;
@@ -20,13 +21,18 @@ html {
 }
 
 body {
-    margin: 10px;
+
+    margin: 0px;
     padding: 0;
     
   }
 
 .grid-body{
+    position: absolute;
     display: grid;
+    margin: 10px;
+    margin-top: 50px;
+    margin-left: 50px;
     grid-template-columns: repeat(
       100,
       100px
@@ -44,12 +50,66 @@ a{
     text-decoration: none;
 }
 
-.main-body{
+.ruler-layer{
+    position: absolute;
     width: 10000px;
     height: 10000px;
+}
+.ruler-corner{
+    position: relative;
+    height: 40px;
+    width: 40px;
+    margin-right: 5px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    z-index: 7;
+    background-color: lightgreen;
+}
 
+.rulerX{
+    position: sticky;
+    display: flex;
+    padding-left: 0px;
+    margin: 0px;
+    width: 10000px;
+    height: 40px;
+    background-color: lightgreen;
+    border-bottom: 1px solid black;
+    z-index: 5;
+}
+.rulerX-number{
+    font-weight: 400;
+    padding-top: 8px;
+    justify-content: center;
+    text-align: center;
+    width: 110px;
+    border-right: 1px solid black;
 
 }
+
+.rulerY{
+
+    padding-top: 5px;
+    left: 0;
+    top: 40px;
+    width: 40px;
+    height: 10000px;
+    background-color: lightgreen;
+    border-right: 1px solid black;
+    z-index: 4;
+}
+.rulerY-number{
+    font-weight: 400;
+    padding-top: 40px;
+    justify-content: center;
+    text-align: center;
+    height: 110px;
+    border-bottom: 1px solid black;
+
+}
+/**/
+
+
 
 .h1-section{
     display: flex;
@@ -112,21 +172,29 @@ a{
     position: relative;
     background-color: lightgreen;
     border: 1px solid black;
-    border-radius: 15px;
+    border-radius: 5px;
     overflow-x: hidden;
     flex-wrap: wrap;
     z-index: 0;
   }
+.empty-plot{
+    position: relative;
+    border: 1px dashed lightgreen;
+    border-radius: 5px;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    z-index: 0;
+}
 
   /* Customize the placement of plots based on grid coordinates */
   .plot-digest1 {
-    grid-column: 2 / span 8;
-    grid-row: 1 / span 7;
+    grid-column: 2 / span 7;
+    grid-row: 1 / span 6;
   }
 
   .plot-artifacts {
-    grid-column: 2 / span 8;
-    grid-row: 8 / span 3;
+    grid-column: 2 / span 7;
+    grid-row: 7 / span 3;
   }
   .plot-1 {
     grid-column: 1 / span 1;

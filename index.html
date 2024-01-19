@@ -21,6 +21,57 @@
     <title>Collective Sensemaking Garden</title>
   </head>
   <body>
+    <div class="ruler-layer">
+      
+      <div class="rulerX">
+        <div class="ruler-corner"></div>
+        <div class="rulerX-number" >1</div>
+        <div class="rulerX-number">2</div>
+        <div class="rulerX-number">3</div>
+        <div class="rulerX-number">4</div>
+        <div class="rulerX-number">5</div>
+        <div class="rulerX-number">6</div>
+        <div class="rulerX-number">7</div>
+        <div class="rulerX-number">8</div>
+        <div class="rulerX-number">9</div>
+        <div class="rulerX-number">10</div>
+        <div class="rulerX-number">11</div>
+        <div class="rulerX-number">12</div>
+        <div class="rulerX-number">13</div>
+        <div class="rulerX-number">14</div>
+        <div class="rulerX-number">15</div>
+        <div class="rulerX-number">16</div>
+        <div class="rulerX-number">17</div>
+        <div class="rulerX-number">18</div>
+        <div class="rulerX-number">19</div>
+        <div class="rulerX-number">20</div>
+      </div>
+      
+      <div class="rulerY">
+        <div class="rulerY-number">1</div>
+        <div class="rulerY-number">2</div>
+        <div class="rulerY-number">3</div>
+        <div class="rulerY-number">4</div>
+        <div class="rulerY-number">5</div>
+        <div class="rulerY-number">6</div>
+        <div class="rulerY-number">7</div>
+        <div class="rulerY-number">8</div>
+        <div class="rulerY-number">9</div>
+        <div class="rulerY-number">10</div>
+        <div class="rulerY-number">11</div>
+        <div class="rulerY-number">12</div>
+        <div class="rulerY-number">13</div>
+        <div class="rulerY-number">14</div>
+        <div class="rulerY-number">15</div>
+        <div class="rulerY-number">16</div>
+        <div class="rulerY-number">17</div>
+        <div class="rulerY-number">18</div>
+        <div class="rulerY-number">19</div>
+        <div class="rulerY-number">20</div>
+      </div>
+      <!--   -->
+  
+    </div>
     <div class="grid-body">
           <!-- Example plots with specified grid coordinates -->
 
@@ -41,14 +92,82 @@
         </div>
       </div>
     </div>
-    <div class="plot plot-1"></div>
-    <div class="plot plot-2"></div>
-    <div class="plot plot-3"></div>
-    <div class="plot plot-4"></div>
-    <div class="plot plot-5"></div>
-    <div class="plot plot-6"></div>
+    <div class="empty-plot" style="grid-column: 1 / span 1;
+    grid-row: 1 / span 1;">1</div>
+    <div class="empty-plot" style="grid-column: 1 / span 1;
+    grid-row: 2 / span 1;">2</div>
+    <div class="empty-plot" style="grid-column: 1 / span 1;
+    grid-row: 3 / span 1;">3</div>
+    <div class="empty-plot" style="grid-column: 1 / span 1;
+    grid-row: 4 / span 1;">4</div>
+    <div class="empty-plot" style="grid-column: 1 / span 1;
+    grid-row: 5 / span 1;">5</div>
+    <div class="empty-plot" style="grid-column: 1 / span 1;
+    grid-row: 6 / span 1;">6</div>
+
+    <div class="empty-plot" style="grid-column: 9 / span 4;
+    grid-row: 1 / span 3;">Test A</div>
+    <div class="empty-plot" style="grid-column: 13 / span 3;
+    grid-row: 1 / span 3;">Test B</div>
+    <div class="empty-plot" style="grid-column: 16 / span 3;
+    grid-row: 1 / span 3;">Test C</div>
+    <div class="empty-plot" style="grid-column: 9 / span 6;
+    grid-row: 4 / span 3;">Test D</div>
     <!-- Add more plots as needed with specific grid coordinates -->
     </div>
 
   </body>
+  <script>
+
+    window.addEventListener("scroll", function () {
+    var scrollPosition = window.pageYOffset;
+
+    // If the user has scrolled more than 100 pixels, add a fixed positioning to the navbar
+    if (scrollPosition > 0) {
+      document.querySelector(".rulerX").style.position = "sticky";
+      document.querySelector(".rulerX").style.top = "0";
+    } else {
+      document.querySelector(".rulerX").style.position = "sticky";
+      document.querySelector(".rulerX").style.top = "0";
+    }
+});
+window.addEventListener("scroll", function () {
+    var scrollPosition = window.pageYOffset;
+
+    // If the user has scrolled more than 100 pixels, add a fixed positioning to the navbar
+    if (scrollPosition > 0) {
+      document.querySelector(".rulerY").style.position = "sticky";
+      document.querySelector(".rulerY").style.left = "0";
+    } else {
+      document.querySelector(".rulerY").style.position = "sticky";
+      document.querySelector(".rulerY").style.left = "0";
+    }
+});
+
+window.addEventListener("scroll", function () {
+    var scrollPosition = window.pageYOffset;
+
+    // If the user has scrolled more than 100 pixels, add a fixed positioning to the navbar
+    if (scrollPosition > 0) {
+      document.querySelector(".ruler-corner").style.position = "sticky";
+      document.querySelector(".ruler-corner").style.top = "0";
+    } else {
+      document.querySelector(".ruler-corner").style.position = "sticky";
+      document.querySelector(".ruler-corner").style.top = "0";
+    }
+});
+window.addEventListener("scroll", function () {
+    var scrollPosition = window.pageYOffset;
+
+    // If the user has scrolled more than 100 pixels, add a fixed positioning to the navbar
+    if (scrollPosition > 0) {
+      document.querySelector(".ruler-corner").style.position = "sticky";
+      document.querySelector(".ruler-corner").style.left = "0";
+    } else {
+      document.querySelector(".ruler-corner").style.position = "sticky";
+      document.querySelector(".ruler-corner").style.left = "0";
+    }
+});
+
+  </script>
 </html>
