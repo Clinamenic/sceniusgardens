@@ -5,29 +5,32 @@
 }
 
 html {
-    width: 10000px;
-    height: 10000px;
-    font-size: 16;
+
+    overflow:scroll;
+    font-size: 16px;
     font-family: "Roboto Mono"; 
     font-weight: 200;
     background-color: darkolivegreen;
+    margin: 0px;
+    padding: 0px;
     color: black;
     scroll-behavior: smooth;
     cursor: url('https://indigo-cautious-chinchilla-877.mypinata.cloud/ipfs/QmXGbD6CTvMWKqdHGEHAzmAju3ZxxkdzUVGpgXSYRntc5K') 9 9, auto;
 }
 
 body {
+    
     margin: 0px;
     padding: 0;
+
     
   }
 
 .grid-body{
-    position: absolute;
+    max-height: 11080px;
+    position: relative;
     display: grid;
-    margin: 10px;
-    margin-top: 50px;
-    margin-left: 50px;
+    padding: 50px;
     grid-template-columns: repeat(
       120,
       100px
@@ -58,7 +61,7 @@ body {
     z-index: 3;
 }
 .title-plot {
-    color: white;
+    color: black;
     font-size: 30px;
     position: relative;
     background-color: white;
@@ -71,7 +74,7 @@ body {
     animation: floatUpDown 4s linear infinite;
   }
   .title-plot2 {
-    color: white;
+    color: black;
     font-size: 30px;
     position: relative;
     background-color: white;
@@ -84,7 +87,7 @@ body {
     animation: floatUpDown 8s linear infinite;
   }
   .title-plot3 {
-    color: white;
+    color: black;
     font-size: 30px;
     position: relative;
     background-color: white;
@@ -104,13 +107,52 @@ a{
 
 .ruler-layer{
     position: absolute;
-    width: 10000px;
-    height: 10000px;
+    width: 11000px;
+    height: 11080px;
 }
-.ruler-corner{
-    position: relative;
+.rulerY-layer{
+    position: absolute;
+    display: flex;
+    width: 11000px;
+
+
+}
+.ruler-corner-topright{
     height: 40px;
     width: 40px;
+    left: calc(100% - 40px);
+    margin-right: 0px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    z-index: 7;
+    background-color: lightgreen;
+}
+.ruler-corner-topleft{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    left: 0;
+    margin-right: 5px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    z-index: 7;
+    background-color: lightgreen;
+}
+.ruler-corner-bottomright{
+    height: 40px;
+    width: 40px;
+    left: calc(100% - 40px);
+    margin-right: 0px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    z-index: 7;
+    background-color: lightgreen;
+}
+.ruler-corner-bottomleft{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    left: 0;
     margin-right: 5px;
     border-right: 1px solid black;
     border-bottom: 1px solid black;
@@ -119,14 +161,27 @@ a{
 }
 
 .rulerX{
-    position: sticky;
+
     display: flex;
     padding-left: 0px;
     margin: 0px;
-    width: 10000px;
+    width: 11000px;
     height: 40px;
+    top: 0;
     background-color: lightgreen;
     border-bottom: 1px solid black;
+    z-index: 5;
+}
+.rulerX-bottom{
+
+    display: flex;
+    padding-left: 0px;
+    margin: 0px;
+    width: 11000px;
+    height: 40px;
+    top: calc(100% - 40px);
+    background-color: lightgreen;
+    border-top: 1px solid black;
     z-index: 5;
 }
 .rulerX-number{
@@ -140,14 +195,25 @@ a{
 }
 
 .rulerY{
-
+    position: absolute;
     padding-top: 5px;
     left: 0;
     top: 40px;
     width: 40px;
-    height: 10000px;
+    height: 11000px;
     background-color: lightgreen;
     border-right: 1px solid black;
+    z-index: 4;
+}
+.rulerY-right{
+    position: absolute;
+    padding-top: 5px;
+    left: calc(100% - 40px);
+    top: 40px;
+    width: 40px;
+    height: 11000px;
+    background-color: lightgreen;
+    border-left: 1px solid black;
     z-index: 4;
 }
 .rulerY-number{
@@ -326,8 +392,8 @@ a{
 }
 
 .space-invader{
-    top: 0px;
-    left: 0px;
+    top: 50px;
+    left: 50px;
     position: absolute;
     filter: invert(100%);
     animation: invade 30s  ease-in-out infinite;
@@ -338,9 +404,9 @@ a{
 
 @keyframes invade {
     0% {transform: translateX(0) translateY(0);}
-    25% {transform: translateX(2200px) translateY(0);}
-    50% {transform: translateX(2200px) translateY(2200px);}
-    75% {transform: translateX(0) translateY(2200px);}
+    25% {transform: translateX(10800px) translateY(0);}
+    50% {transform: translateX(10800px) translateY(10800px);}
+    75% {transform: translateX(0) translateY(10800px);}
     100% {transform: translateX(0) translateY(0);}
   }
 
