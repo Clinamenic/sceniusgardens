@@ -29,16 +29,73 @@ body {
     margin-top: 50px;
     margin-left: 50px;
     grid-template-columns: repeat(
-      100,
+      120,
       100px
     ); /* Adjust the number of columns as needed */
     grid-template-rows: repeat(
-      100,
+      120,
       100px
     ); /* Adjust the number of rows as needed */
     gap: 10px; /* Adjust the gap between cells */
 
 }
+.grid-title{
+    position: relative;
+    display: grid;
+    margin: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    background-color: transparent;
+    grid-template-columns: repeat(
+      70,
+      110px
+    ); /* Adjust the number of columns as needed */
+    grid-template-rows: repeat(
+      70,
+      110px
+    ); /* Adjust the number of rows as needed */
+    gap: -5px; /* Adjust the gap between cells */
+    z-index: 3;
+}
+.title-plot {
+    color: white;
+    font-size: 30px;
+    position: relative;
+    background-color: white;
+    box-shadow: -10px 10px 10px 5px rgba(0,0,0,.8);
+    filter: opacity(80%);
+    border-radius: 15px;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    z-index: 11;
+    animation: floatUpDown 4s linear infinite;
+  }
+  .title-plot2 {
+    color: white;
+    font-size: 30px;
+    position: relative;
+    background-color: white;
+    box-shadow: -10px 10px 10px 5px rgba(0,0,0,.8);
+    filter: opacity(80%);
+    border-radius: 15px;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    z-index: 11;
+    animation: floatUpDown 8s linear infinite;
+  }
+  .title-plot3 {
+    color: white;
+    font-size: 30px;
+    position: relative;
+    background-color: white;
+    box-shadow: -10px 10px 10px 5px rgba(0,0,0,.8);
+    filter: opacity(80%);
+    border-radius: 15px;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    z-index: 11;
+    animation: floatUpDown 12s linear infinite;
+  }
 
 a{
     color: black;
@@ -116,7 +173,6 @@ a{
     font-size: 20px;
     letter-spacing: 10px;
     margin: 0px;
-    border-bottom: 1px solid black;
 }
 
 .spacer5{
@@ -174,17 +230,25 @@ a{
   }
 .empty-plot{
     position: relative;
-    border: 1px dashed lightgreen;
+    border: 1px solid black;
     border-radius: 5px;
+    padding: 5px;
     overflow-x: hidden;
     flex-wrap: wrap;
     z-index: 0;
     background-color: transparent;
-    transition:ease-in 5s;
+    transition:ease-in 0s;
 }
+.trans-plot {
+    position: relative;
+    border-radius: 5px;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    z-index: 0;
+  }
 .link-plot {
     position: relative;
-    background-color: transparent;
+    background-color: lightgreen;
     border: 3px solid lightgreen;
     border-radius: 5px;
     overflow-x: hidden;
@@ -248,7 +312,7 @@ a{
     background-color:springgreen;
     color: black;
     border: 1px dashed black;
-    border-radius: 15px;
+    border-radius: 5px;
     margin: 5px;
     padding-left: 10px;
     padding-right: 10px;
@@ -273,23 +337,19 @@ a{
 
 
 @keyframes invade {
-    0% {
-      transform: translateX(0) translateY(0);
+    0% {transform: translateX(0) translateY(0);}
+    25% {transform: translateX(2200px) translateY(0);}
+    50% {transform: translateX(2200px) translateY(2200px);}
+    75% {transform: translateX(0) translateY(2200px);}
+    100% {transform: translateX(0) translateY(0);}
+  }
+
+
+  @keyframes floatUpDown {
+    0%, 100% {
+      transform: translateY(0);
     }
-  
-    25% {
-      transform: translateX(2200px) translateY(0);
-    }
-  
     50% {
-      transform: translateX(2200px) translateY(2200px);
-    }
-  
-    75% {
-      transform: translateX(0) translateY(2200px);
-    }
-  
-    100% {
-      transform: translateX(0) translateY(0);
+      transform: translateY(-15px);
     }
   }
