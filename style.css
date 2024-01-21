@@ -54,19 +54,52 @@ body {
       110px
     ); /* Adjust the number of columns as needed */
     grid-template-rows: repeat(
-      70,
+      20,
       110px
     ); /* Adjust the number of rows as needed */
-    gap: -5px; /* Adjust the gap between cells */
+    gap: 0px; /* Adjust the gap between cells */
+    z-index: 11;
+}
+.grid-title-shadow{
+    position: relative;
+    display: grid;
+    margin: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    background-color: transparent;
+    grid-template-columns: repeat(
+      70,
+      110px
+    ); /* Adjust the number of columns as needed */
+    grid-template-rows: repeat(
+      18,
+      110px
+    ); /* Adjust the number of rows as needed */
+    gap: 0px; /* Adjust the gap between cells */
     z-index: 3;
 }
+.grid-title-shadow .title-plot{
+    background-color: black;
+    z-index: 3;
+    filter: opacity(30%) blur(15px);
+}
+.grid-title-shadow .title-plot2{
+    background-color: black;
+    z-index: 3;
+    filter: opacity(30%) blur(15px);
+}
+.grid-title-shadow .title-plot3{
+    background-color: black;
+    z-index: 3;
+    filter: opacity(30%) blur(15px);
+}
+/* box-shadow: -10px 10px 10px 5px rgba(0,0,0,.8); */
 .title-plot {
-    color: black;
+    color: white;
     font-size: 30px;
     position: relative;
     background-color: white;
-    box-shadow: -10px 10px 10px 5px rgba(0,0,0,.8);
-    filter: opacity(80%);
+    filter: opacity(90%);
     border-radius: 15px;
     overflow-x: hidden;
     flex-wrap: wrap;
@@ -74,12 +107,11 @@ body {
     animation: floatUpDown 4s linear infinite;
   }
   .title-plot2 {
-    color: black;
+    color: white;
     font-size: 30px;
     position: relative;
     background-color: white;
-    box-shadow: -10px 10px 10px 5px rgba(0,0,0,.8);
-    filter: opacity(80%);
+    filter: opacity(90%);
     border-radius: 15px;
     overflow-x: hidden;
     flex-wrap: wrap;
@@ -87,12 +119,11 @@ body {
     animation: floatUpDown 8s linear infinite;
   }
   .title-plot3 {
-    color: black;
+    color: white;
     font-size: 30px;
     position: relative;
     background-color: white;
-    box-shadow: -10px 10px 10px 5px rgba(0,0,0,.8);
-    filter: opacity(80%);
+    filter: opacity(90%);
     border-radius: 15px;
     overflow-x: hidden;
     flex-wrap: wrap;
