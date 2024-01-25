@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "Scorpius";
+    src: url(https://indigo-cautious-chinchilla-877.mypinata.cloud/ipfs/QmWb9s4N9j7td55XG6jEygSSNh7ACQfw7VfqCkiy4yfWcm);
+    src: url(https://indigo-cautious-chinchilla-877.mypinata.cloud/ipfs/QmWb9s4N9j7td55XG6jEygSSNh7ACQfw7VfqCkiy4yfWcm) format("opentype");
+    font-weight: 100;
+}
+
+
 
 * {
     box-sizing: border-box;
@@ -29,9 +37,11 @@ body {
 .grid-body{
     height: 11000px;
     width: 11000px;
-    position: relative;
+
+    position: absolute;
     display: grid;
     padding: 10px;
+    padding-left: 35px;
     grid-template-columns: repeat(
       120,
       100px
@@ -273,7 +283,8 @@ a{
     background-color:lightgreen;
     padding: 10px;
     font-weight: 200;
-    font-size: 15px;
+    font-size: 20px;
+    font-weight: 400;
     letter-spacing: 10px;
     margin: 0px;
 }
@@ -356,7 +367,7 @@ a{
     border-radius: 5px;
     overflow-x: hidden;
     flex-wrap: wrap;
-    z-index: 12;
+    z-index: 6;
   }
   .link-plot-body{
     justify-content: center;
@@ -364,7 +375,7 @@ a{
     position: relative;
     display: flex;
     padding: 5px;
-    z-index: 12;
+    z-index: 6;
 }
 
 
@@ -399,6 +410,11 @@ a{
 .member-portal{
     width: 100%;
     height: 100%;
+}
+
+.text-box{
+    margin: 10px;
+    text-align: center;
 }
 .link-box{
     position: relative;
@@ -437,7 +453,7 @@ a{
     position: absolute;
     filter: invert(100%);
     animation: invade 120s  ease-in-out infinite;
-    z-index: 3;
+    z-index: 7;
 }
 
 
