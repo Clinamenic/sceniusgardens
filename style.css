@@ -283,7 +283,7 @@ a{
     background-color:lightgreen;
     padding: 10px;
     font-weight: 200;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 400;
     letter-spacing: 10px;
     margin: 0px;
@@ -341,7 +341,19 @@ a{
     overflow-x: hidden;
     flex-wrap: wrap;
     z-index: 0;
-  }
+}
+
+.quote-plot {
+  position: relative;
+  background-color: lightgreen;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 15px;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  z-index: 0;
+}
+
 .empty-plot{
     position: relative;
     border: 1px solid black;
