@@ -470,6 +470,32 @@ a{
 
 
 
+.topics-list {
+  display: grid;
+  font-size: ;
+
+  grid-template-columns: repeat(2, 1fr);
+  .topic-list-item {
+    .main-link {
+      border: 1px dotted gray;
+      padding: 0;
+    }
+    .topic-column-wrapper {
+      flex-direction: column-reverse;
+      .topic-column.details-column {
+        width: 100%;
+      }
+      .topic-column.featured-image-column .topic-featured-image img {
+        max-width: initial;
+        max-height: initial;
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
 @keyframes invade {
     0% {transform: translateX(0) translateY(0);}
     25% {transform: translateX(10800px) translateY(0);}
